@@ -1,13 +1,15 @@
 require_relative './Person'
 
-class Teacher < Person
-    def initialize(specialization="unknown")
-        @specialization =specialization
-    end    
+class MyTeacher < MyPerson
+  def initialize(specialization)
+    super()
+    @specialization = specialization
+  end
+  # def get_specialization
+  #   @specialization
+  # end
 
-    def can_use_services
-        true
-    end
-
-
+  def can_use_services
+    true
+  end
 end
