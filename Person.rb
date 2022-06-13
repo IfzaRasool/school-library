@@ -37,22 +37,3 @@ class Person
     end
 
 end
-# person_1=Person.new("Bob", 19)
-# # puts "name and age: #{person_1}"
-
-# # use setter methods
-# # person_1.setName="Ifza"
-# # person_1.setAge=29
-# #getter
-
-# x = person_1.getName()
-# y = person_1.getAge()
-
-# puts "Name is : #{x}"
-# puts "Age is : #{y}"
-
-# person_1.can_use_services;
-# # call instance methods
-# # a = person_1.can_use_services()
-# # puts " Can Use services : #{a}"
-
