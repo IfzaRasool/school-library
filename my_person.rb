@@ -28,13 +28,17 @@ class MyPerson < Nameable
   end
 end
 
-class CapitalizeDecorator < Nameable
+class Decorator < Nameable
   attr_accessor :nameable
 
 
   def initialize(nameable)
     @nameable = nameable
   end
+
+end
+
+class CapitalizeDecorator < Decorator
 
   def correct_name
     @nameable.correct_name.upcase()
