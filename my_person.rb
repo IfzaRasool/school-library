@@ -9,6 +9,7 @@ class MyPerson < Nameable
   attr_accessor :name, :age
 
   def initialize(age, name = 'Unknown', parent_permission: true)
+    super()
     @id = Random.rand(1..1000)
     @name = name
     @age = age
@@ -18,6 +19,7 @@ class MyPerson < Nameable
   def of_age?
     @age >= 18
   end
+
   # private :of_age
   def can_use_services?
     @parent_permission || of_age?
@@ -31,42 +33,39 @@ end
 class Decorator < Nameable
   attr_accessor :nameable
 
-
   def initialize(nameable)
+    super()
     @nameable = nameable
   end
-
 end
 
 class CapitalizeDecorator < Decorator
-
   def correct_name
-    @nameable.correct_name.upcase()
+    @nameable.correct_name.upcase
   end
 end
 
 class TrimmerDecorator < CapitalizeDecorator
-  
-    def correct_name
-     @wordLen = @nameable.correct_name.length()
-     @wordTrim = @nameable.correct_name
-     if @wordLen <= 10
-        puts @wordTrim
-       else 
-        for a in 1..@wordLen do
-          if @wordLen >10
-           @wordTrim = @wordTrim.chop()
-           @wordLen = @wordTrim.length()
-           puts @wordTrim
-          end   
-        end
+  def correct_name
+    @word_len = @nameable.correct_name.length
+    @word_trim = @nameable.correct_name
+    if @word_len <= 10
+      puts @word_trim
+    else
+      (1..@word_len).each do |_i|
+        next unless @word_len > 10
+
+        @word_trim = @word_trim.chop
+        @word_len = @word_trim.length
+        puts @word_trim
       end
     end
+  end
 end
 
 person = MyPerson.new(22, 'maximilian')
-  person.correct_name
-  capitalizedPerson = CapitalizeDecorator.new(person)
-  capitalizedPerson.correct_name
-  capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-  capitalizedTrimmedPerson.correct_name
+person.correct_name
+capitalized_person = CapitalizeDecorator.new(person)
+capitalized_person.correct_name
+capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
+capitalized_trimmed_person.correct_name
