@@ -5,7 +5,7 @@
 
  git clone (https://github.com/IfzaRasool/school-library.git) <Your-Build-Directory>
 ``` 
-- cd Decode-Morse-code
+- cd school-library
 ```
 ## Prerequisites
 
