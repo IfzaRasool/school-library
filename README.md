@@ -3,7 +3,7 @@
 
 ### Cloning the project
 
- git clone https://github.com/sentayhu19/Decode-Morse-code.git <Your-Build-Directory>
+ git clone https://github.com/IfzaRasool/school-library.git <Your-Build-Directory>
 ``` 
 - cd Decode-Morse-code
 ```
