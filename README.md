@@ -3,10 +3,10 @@
 
 ### Cloning the project
 
- git clone (https://github.com/IfzaRasool/school-library.git) <Your-Build-Directory>
-``` 
-- cd school-library
-```
+ git clone https://github.com/IfzaRasool/school-library.git 
+ 
+
+
 ## Prerequisites
 
 Vscode or anyother
