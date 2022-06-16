@@ -1,4 +1,4 @@
-def my_rental
+class Rental
   attr_reader :person, :book
   attr_accessor :date
 
