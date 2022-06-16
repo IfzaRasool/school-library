@@ -4,11 +4,12 @@
 ### Cloning the project
 
  git clone https://github.com/IfzaRasool/school-library.git 
- 
+
 ## Prerequisites
 
 Vscode or anyother
 Setup
+
 ## Install
     Ruby
 ## Run tests
