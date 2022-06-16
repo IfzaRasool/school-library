@@ -3,10 +3,8 @@
 
 ### Cloning the project
 
- git clone https://github.com/IfzaRasool/school-library.git <Your-Build-Directory>
-``` 
-- cd Decode-Morse-code
-```
+ git clone https://github.com/IfzaRasool/school-library.git 
+ 
 ## Prerequisites
 
 Vscode or anyother
