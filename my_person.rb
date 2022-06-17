@@ -1,3 +1,4 @@
+require 'pry'
 class Nameable
   def correct_name
     raise NotImplementedError, "#{self.class} has not implemented method '#{__method__}'"
@@ -72,9 +73,9 @@ class TrimmerDecorator < CapitalizeDecorator
   end
 end
 
-# person = MyPerson.new(22, 'maximilian')
-# person.correct_name
-# capitalized_person = CapitalizeDecorator.new(person)
-# capitalized_person.correct_name
-# capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
-# capitalized_trimmed_person.correct_name
+person = MyPerson.new(22, 'maximilian')
+person.correct_name
+capitalized_person = CapitalizeDecorator.new(person)
+capitalized_person.correct_name
+capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
+capitalized_trimmed_person.correct_name
