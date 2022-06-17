@@ -51,7 +51,6 @@ end
 
 class CapitalizeDecorator < Decorator
   def correct_name
-    binding.pry
     @nameable.correct_name.upcase
   end
 end
